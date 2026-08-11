@@ -1,0 +1,67 @@
+<TRSP_Data>
+    <!-- GÖREV (HİZMET) TANIMLAMALARI VE STOKASTİK SÜRELER -->
+    <!-- Zaman Birimi: Saniye -->
+    <ServiceDefinitions>
+        <TaskType ID="P1" Name="5G_Montaji" RequiredSkill="s1">
+            <ProcessingTime Distribution="Uniform" Min="3600" Max="7200" ExpectedMean="5400"/>
+        </TaskType>
+        
+        <TaskType ID="P2" Name="Fiber_Altyapi" RequiredSkill="s2">
+            <ProcessingTime Distribution="Uniform" Min="3600" Max="7200" ExpectedMean="5400"/>
+        </TaskType>
+        
+        <TaskType ID="P3" Name="Major_Ariza" RequiredSkill="s3">
+            <ProcessingTime Distribution="Uniform" Min="3600" Max="7200" ExpectedMean="5400"/>
+        </TaskType>
+        
+        <TaskType ID="P4" Name="Saha_Kesfi" RequiredSkill="s4">
+            <ProcessingTime Distribution="Uniform" Min="1800" Max="3600" ExpectedMean="2700"/>
+        </TaskType>
+        
+        <TaskType ID="P5" Name="Musteri_Destek" RequiredSkill="s5">
+            <!-- Formül U(15, 75) baz alınarak Ortalama (Mean) 45 dk (2700 sn) olarak hesaplanmıştır -->
+            <ProcessingTime Distribution="Uniform" Min="900" Max="4500" ExpectedMean="2700"/>
+        </TaskType>
+    </ServiceDefinitions>
+
+    <!-- İŞ GÜCÜ VE EKİP YAPILANMASI -->
+    <Workforce>
+        <!-- Ekip 1: 5G Kurulumu (2 Kişi) -->
+        <Team ID="TEAM_1" Size="2" SkillSet="s1" TargetTask="P1">
+            <Members>
+                <Technician ID="TECH_001"/>
+                <Technician ID="TECH_002"/>
+            </Members>
+        </Team>
+
+        <!-- Ekip 2: Fiber Altyapı (2 Kişi) -->
+        <Team ID="TEAM_2" Size="2" SkillSet="s2" TargetTask="P2">
+            <Members>
+                <Technician ID="TECH_003"/>
+                <Technician ID="TECH_004"/>
+            </Members>
+        </Team>
+
+        <!-- Ekip 3: Major Arıza (2 Kişi) -->
+        <Team ID="TEAM_3" Size="2" SkillSet="s3" TargetTask="P3">
+            <Members>
+                <Technician ID="TECH_005"/>
+                <Technician ID="TECH_006"/>
+            </Members>
+        </Team>
+
+        <!-- Ekip 4: Saha Keşfi (1 Kişi) -->
+        <Team ID="TEAM_4" Size="1" SkillSet="s4" TargetTask="P4">
+            <Members>
+                <Technician ID="TECH_007"/>
+            </Members>
+        </Team>
+
+        <!-- Ekip 5: Müşteri Destek (1 Kişi) -->
+        <Team ID="TEAM_5" Size="1" SkillSet="s5" TargetTask="P5">
+            <Members>
+                <Technician ID="TECH_008"/>
+            </Members>
+        </Team>
+    </Workforce>
+</TRSP_Data>

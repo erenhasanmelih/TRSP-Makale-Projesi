@@ -1,0 +1,356 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Info4Task>
+    <Task>
+        <CEVRPTW NumberOfDelivery="20" NumberOfPickup="0">
+            <Nodes>
+                <Node No="280" Name="cs_5" Type="Entrance">
+                    <Location>
+                        <Latitude>39.7463883333414</Latitude>
+                        <Longitude>30.5123969369325</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                </Node>
+                <Node No="280" Name="cs_5" Type="Exit">
+                    <Location>
+                        <Latitude>39.7463883333414</Latitude>
+                        <Longitude>30.5123969369325</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                </Node>
+                <Node No="280" Name="cs_5" Type="DepoCharging">
+                    <Location>
+                        <Latitude>39.7463883333414</Latitude>
+                        <Longitude>30.5123969369325</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                </Node>
+                <Node No="239" Name="ct_65" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7636990797079</Latitude>
+                        <Longitude>30.5114001792101</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="A" ProductName="A" ReadyTime="0" DueDate="7200" ServiceTime="120">
+                            <LoadInformation>
+                                <Weight>38</Weight>
+                                <Quantity>2</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="158" Name="ct_24" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7682561464093</Latitude>
+                        <Longitude>30.517065297694</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="A" ProductName="A" ReadyTime="0" DueDate="7200" ServiceTime="120">
+                            <LoadInformation>
+                                <Weight>38</Weight>
+                                <Quantity>2</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="103" Name="ct_190" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7554909432208</Latitude>
+                        <Longitude>30.4963691521112</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="A" ProductName="A" ReadyTime="0" DueDate="7200" ServiceTime="300">
+                            <LoadInformation>
+                                <Weight>133</Weight>
+                                <Quantity>7</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="197" Name="ct_278" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7506113044915</Latitude>
+                        <Longitude>30.4748565367012</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="A" ProductName="A" ReadyTime="0" DueDate="7200" ServiceTime="120">
+                            <LoadInformation>
+                                <Weight>38</Weight>
+                                <Quantity>2</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="143" Name="ct_226" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7521699079725</Latitude>
+                        <Longitude>30.5007048978018</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="A" ProductName="A" ReadyTime="0" DueDate="7200" ServiceTime="300">
+                            <LoadInformation>
+                                <Weight>95</Weight>
+                                <Quantity>5</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="88" Name="ct_177" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7545419117536</Latitude>
+                        <Longitude>30.5005796139198</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="A" ProductName="A" ReadyTime="0" DueDate="7200" ServiceTime="120">
+                            <LoadInformation>
+                                <Weight>19</Weight>
+                                <Quantity>1</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="227" Name="ct_54" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7638008005318</Latitude>
+                        <Longitude>30.5119618392814</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="A" ProductName="A" ReadyTime="0" DueDate="7200" ServiceTime="300">
+                            <LoadInformation>
+                                <Weight>114</Weight>
+                                <Quantity>6</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="220" Name="ct_48" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7645126247311</Latitude>
+                        <Longitude>30.5150201494835</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="A" ProductName="A" ReadyTime="0" DueDate="7200" ServiceTime="120">
+                            <LoadInformation>
+                                <Weight>38</Weight>
+                                <Quantity>2</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="126" Name="ct_210" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7540407878237</Latitude>
+                        <Longitude>30.4940714635541</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="A" ProductName="A" ReadyTime="0" DueDate="7200" ServiceTime="120">
+                            <LoadInformation>
+                                <Weight>19</Weight>
+                                <Quantity>1</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="94" Name="ct_182" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7471005672777</Latitude>
+                        <Longitude>30.473750112346</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="A" ProductName="A" ReadyTime="0" DueDate="7200" ServiceTime="120">
+                            <LoadInformation>
+                                <Weight>19</Weight>
+                                <Quantity>1</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="39" Name="ct_132" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7527925029258</Latitude>
+                        <Longitude>30.5041682624063</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="A" ProductName="A" ReadyTime="0" DueDate="7200" ServiceTime="300">
+                            <LoadInformation>
+                                <Weight>76</Weight>
+                                <Quantity>4</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="16" Name="ct_111" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7574603712793</Latitude>
+                        <Longitude>30.5025061685646</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="A" ProductName="A" ReadyTime="0" DueDate="7200" ServiceTime="120">
+                            <LoadInformation>
+                                <Weight>38</Weight>
+                                <Quantity>2</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="238" Name="ct_64" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7635744774704</Latitude>
+                        <Longitude>30.5109310419987</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="A" ProductName="A" ReadyTime="0" DueDate="7200" ServiceTime="120">
+                            <LoadInformation>
+                                <Weight>38</Weight>
+                                <Quantity>2</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="169" Name="ct_25" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7676235856243</Latitude>
+                        <Longitude>30.5175860178302</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="A" ProductName="A" ReadyTime="0" DueDate="7200" ServiceTime="300">
+                            <LoadInformation>
+                                <Weight>133</Weight>
+                                <Quantity>7</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="132" Name="ct_216" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7558654168125</Latitude>
+                        <Longitude>30.4919431217579</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="A" ProductName="A" ReadyTime="0" DueDate="7200" ServiceTime="120">
+                            <LoadInformation>
+                                <Weight>38</Weight>
+                                <Quantity>2</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="196" Name="ct_274" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7501186149899</Latitude>
+                        <Longitude>30.4850271583497</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="A" ProductName="A" ReadyTime="0" DueDate="7200" ServiceTime="120">
+                            <LoadInformation>
+                                <Weight>19</Weight>
+                                <Quantity>1</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="177" Name="ct_257" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7480482718888</Latitude>
+                        <Longitude>30.5002681368781</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="A" ProductName="A" ReadyTime="0" DueDate="7200" ServiceTime="300">
+                            <LoadInformation>
+                                <Weight>114</Weight>
+                                <Quantity>6</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="32" Name="ct_126" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7538064279333</Latitude>
+                        <Longitude>30.5014014907423</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="A" ProductName="A" ReadyTime="0" DueDate="7200" ServiceTime="120">
+                            <LoadInformation>
+                                <Weight>19</Weight>
+                                <Quantity>1</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="266" Name="ct_90" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7623127879097</Latitude>
+                        <Longitude>30.5051321115654</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="A" ProductName="A" ReadyTime="0" DueDate="7200" ServiceTime="300">
+                            <LoadInformation>
+                                <Weight>133</Weight>
+                                <Quantity>7</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="209" Name="ct_38" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7648137097596</Latitude>
+                        <Longitude>30.5166675569611</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="A" ProductName="A" ReadyTime="0" DueDate="7200" ServiceTime="300">
+                            <LoadInformation>
+                                <Weight>57</Weight>
+                                <Quantity>3</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+            </Nodes>
+        </CEVRPTW>
+        <PerformanceMeasure>
+            <ObjectiveFunction Name="MinDistance" />
+        </PerformanceMeasure>
+    </Task>
+</Info4Task>

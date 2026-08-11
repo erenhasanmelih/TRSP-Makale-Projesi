@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Info4ChargingStation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ChargingStations>
+        <ChargingStation Name="cs_0" CountryCode="tr" PartyId="" Id="" Publish="true" Address="Eskisehir ESOGU" City="Eskisehir" PostalCode="26100" State="" Country="Turkey">
+            <Location>
+                <Latitude>39.756728865764</Latitude>
+                <Longitude>30.4910341893335</Longitude>
+                <Elevation>-1</Elevation>
+                <X_Coordinates>-1</X_Coordinates>
+                <Y_Coordinates>-1</Y_Coordinates>
+            </Location>
+        </ChargingStation>
+        <ChargingStation Name="cs_1" CountryCode="tr" PartyId="" Id="" Publish="true" Address="Eskisehir ESOGU" City="Eskisehir" PostalCode="26100" State="" Country="Turkey">
+            <Location>
+                <Latitude>39.750426955836</Latitude>
+                <Longitude>30.4957525923946</Longitude>
+                <Elevation>-1</Elevation>
+                <X_Coordinates>-1</X_Coordinates>
+                <Y_Coordinates>-1</Y_Coordinates>
+            </Location>
+        </ChargingStation>
+        <ChargingStation Name="cs_2" CountryCode="tr" PartyId="" Id="" Publish="true" Address="Eskisehir ESOGU" City="Eskisehir" PostalCode="26100" State="" Country="Turkey">
+            <Location>
+                <Latitude>39.7659161872082</Latitude>
+                <Longitude>30.5120742773008</Longitude>
+                <Elevation>-1</Elevation>
+                <X_Coordinates>-1</X_Coordinates>
+                <Y_Coordinates>-1</Y_Coordinates>
+            </Location>
+        </ChargingStation>
+        <ChargingStation Name="cs_3" CountryCode="tr" PartyId="" Id="" Publish="true" Address="Eskisehir ESOGU" City="Eskisehir" PostalCode="26100" State="" Country="Turkey">
+            <Location>
+                <Latitude>39.7590774349756</Latitude>
+                <Longitude>30.4989439845665</Longitude>
+                <Elevation>-1</Elevation>
+                <X_Coordinates>-1</X_Coordinates>
+                <Y_Coordinates>-1</Y_Coordinates>
+            </Location>
+        </ChargingStation>
+    </ChargingStations>
+</Info4ChargingStation>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Fleet>
+ <Info4Vehicle  
+        ID="EV_1"
+        Type="EV"
+        Model="E_Doblo_Cargo_Maxi" 
+        Year="2022"  
+        BatteryCapacity="50000" 
+        SoC="50000" 
+        MaxSpeed="37.5" 
+        VehicleMass="1750" 
+        MaximumLoadCapacityVolume="-1" #4.4
+        MaximumLoadCapacityKg="-1" #700
+        BatteryRechargingRate="27.78" 
+        EnergyConsumptionRate="0.155" 
+        SoH="95.0" 
+        Range="322000" 
+        ChargingTime="-1"  
+        Torque="-1">
+
+    <!-- Charging strategy details -->
+    <ChargingStrategy>PartialCharge</ChargingStrategy>
+
+    <!-- Driver information -->
+    <DriverInformation Id="DRIVER001" Style="option1"/>
+
+    <!-- Current location details -->
+    <CurrentLocation>
+        <Latitude>39.751377</Latitude>
+        <Longitude>30.481888</Longitude>
+        <Elevation>-1</Elevation>
+    </CurrentLocation>
+
+    <CurrentLoadCapacity>
+        <Weight>350</Weight>
+        <Volume>-1</Volume>
+    </CurrentLoadCapacity>
+
+ </Info4Vehicle>
+
+  <Info4Vehicle  
+        ID="EV_2"
+        Type="EV"
+        Model="E_Doblo_Cargo_Maxi" 
+        Year="2022"  
+        BatteryCapacity="50000" 
+        SoC="50000" 
+        MaxSpeed="37.5" 
+        VehicleMass="1750" 
+        MaximumLoadCapacityVolume="-1" #4.4
+        MaximumLoadCapacityKg="-1" #700
+        BatteryRechargingRate="27.78" 
+        EnergyConsumptionRate="0.155" 
+        SoH="95.0" 
+        Range="322000" 
+        ChargingTime="-1"  
+        Torque="-1">
+
+    <!-- Charging strategy details -->
+    <ChargingStrategy>PartialCharge</ChargingStrategy>
+
+    <!-- Driver information -->
+    <DriverInformation Id="DRIVER001" Style="option1"/>
+
+    <!-- Current location details -->
+    <CurrentLocation>
+        <Latitude>39.751377</Latitude>
+        <Longitude>30.481888</Longitude>
+        <Elevation>-1</Elevation>
+    </CurrentLocation>
+
+    <CurrentLoadCapacity>
+        <Weight>350</Weight>
+        <Volume>-1</Volume>
+    </CurrentLoadCapacity>
+
+ </Info4Vehicle>
+
+  <Info4Vehicle  
+        ID="EV_3"
+        Type="EV"
+        Model="E_Doblo_Cargo_Maxi" 
+        Year="2022"  
+        BatteryCapacity="50000" 
+        SoC="50000" 
+        MaxSpeed="37.5" 
+        VehicleMass="1750" 
+        MaximumLoadCapacityVolume="-1" #4.4
+        MaximumLoadCapacityKg="-1" #700
+        BatteryRechargingRate="27.78" 
+        EnergyConsumptionRate="0.155" 
+        SoH="95.0" 
+        Range="322000" 
+        ChargingTime="-1"  
+        Torque="-1">
+
+    <!-- Charging strategy details -->
+    <ChargingStrategy>PartialCharge</ChargingStrategy>
+
+    <!-- Driver information -->
+    <DriverInformation Id="DRIVER001" Style="option1"/>
+
+    <!-- Current location details -->
+    <CurrentLocation>
+        <Latitude>39.751377</Latitude>
+        <Longitude>30.481888</Longitude>
+        <Elevation>-1</Elevation>
+    </CurrentLocation>
+
+    <CurrentLoadCapacity>
+        <Weight>350</Weight>
+        <Volume>-1</Volume>
+    </CurrentLoadCapacity>
+
+ </Info4Vehicle>
+</Fleet>

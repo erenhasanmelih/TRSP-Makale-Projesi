@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Fleet>
+ <Info4Vehicle  
+        ID="CV_1"
+        Type="CV"
+        Model="Doblo Cargo Maxi 1.5 BlueHDI" 
+        Year="2025"  
+        MaxSpeed="46.67" 
+        VehicleMass="1464" 
+        MaximumLoadCapacityVolume="-1" #4.4
+        MaximumLoadCapacityKg="-1" #700
+        EnergyConsumptionRate="0.055" 
+        Range="6000" 
+        ChargingTime="-1"  
+        Torque="-1">
+
+    <!-- Charging strategy details -->
+    <ChargingStrategy>PartialCharge</ChargingStrategy>
+
+    <!-- Driver information -->
+    <DriverInformation Id="DRIVER001" Style="option1"/>
+
+    <!-- Current location details -->
+    <CurrentLocation>
+        <Latitude>39.751377</Latitude>
+        <Longitude>30.481888</Longitude>
+        <Elevation>-1</Elevation>
+    </CurrentLocation>
+
+    <CurrentLoadCapacity>
+        <Weight>350</Weight>
+        <Volume>-1</Volume>
+    </CurrentLoadCapacity>
+
+ </Info4Vehicle>
+
+ <Info4Vehicle  
+        ID="CV_2"
+        Type="CV"
+        Model="Doblo Cargo Maxi 1.5 BlueHDI" 
+        Year="2025"  
+        MaxSpeed="46.67" 
+        VehicleMass="1464" 
+        MaximumLoadCapacityVolume="-1" #4.4
+        MaximumLoadCapacityKg="-1" #700
+        EnergyConsumptionRate="0.055" 
+        Range="6000" 
+        ChargingTime="-1"  
+        Torque="-1">
+
+    <!-- Charging strategy details -->
+    <ChargingStrategy>PartialCharge</ChargingStrategy>
+
+    <!-- Driver information -->
+    <DriverInformation Id="DRIVER001" Style="option1"/>
+
+    <!-- Current location details -->
+    <CurrentLocation>
+        <Latitude>39.751377</Latitude>
+        <Longitude>30.481888</Longitude>
+        <Elevation>-1</Elevation>
+    </CurrentLocation>
+
+    <CurrentLoadCapacity>
+        <Weight>350</Weight>
+        <Volume>-1</Volume>
+    </CurrentLoadCapacity>
+
+ </Info4Vehicle>
+
+  <Info4Vehicle  
+        ID="CV_3"
+        Type="CV"
+        Model="Doblo Cargo Maxi 1.5 BlueHDI" 
+        Year="2025"  
+        MaxSpeed="46.67" 
+        VehicleMass="1464" 
+        MaximumLoadCapacityVolume="-1" #4.4
+        MaximumLoadCapacityKg="-1" #700
+        EnergyConsumptionRate="0.055" 
+        Range="6000" 
+        ChargingTime="-1"  
+        Torque="-1">
+
+    <!-- Charging strategy details -->
+    <ChargingStrategy>PartialCharge</ChargingStrategy>
+
+    <!-- Driver information -->
+    <DriverInformation Id="DRIVER001" Style="option1"/>
+
+    <!-- Current location details -->
+    <CurrentLocation>
+        <Latitude>39.751377</Latitude>
+        <Longitude>30.481888</Longitude>
+        <Elevation>-1</Elevation>
+    </CurrentLocation>
+
+    <CurrentLoadCapacity>
+        <Weight>350</Weight>
+        <Volume>-1</Volume>
+    </CurrentLoadCapacity>
+
+ </Info4Vehicle>
+</Fleet>

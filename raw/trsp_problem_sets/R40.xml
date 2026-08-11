@@ -1,0 +1,676 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Info4Task>
+    <Task>
+        <CEVRPTW NumberOfDelivery="40" NumberOfPickup="0">
+            <Nodes>
+                <Node No="280" Name="cs_5" Type="Entrance">
+                    <Location>
+                        <Latitude>39.7463883333414</Latitude>
+                        <Longitude>30.5123969369325</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                </Node>
+                <Node No="280" Name="cs_5" Type="Exit">
+                    <Location>
+                        <Latitude>39.7463883333414</Latitude>
+                        <Longitude>30.5123969369325</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                </Node>
+                <Node No="280" Name="cs_5" Type="DepoCharging">
+                    <Location>
+                        <Latitude>39.7463883333414</Latitude>
+                        <Longitude>30.5123969369325</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                </Node>
+                <Node No="94" Name="ct_182" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7471005672777</Latitude>
+                        <Longitude>30.473750112346</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P1" ProductName="P1_Gorevi" ReadyTime="14400" DueDate="36000" ServiceTime="5670" RequiredSkill="s1">
+                            <LoadInformation>
+                                <Weight>19</Weight>
+                                <Quantity>1</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="179" Name="ct_259" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7493479900291</Latitude>
+                        <Longitude>30.4967500395546</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P4" ProductName="P4_Gorevi" ReadyTime="0" DueDate="14400" ServiceTime="2314" RequiredSkill="s4">
+                            <LoadInformation>
+                                <Weight>19</Weight>
+                                <Quantity>1</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="184" Name="ct_263" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7491038756198</Latitude>
+                        <Longitude>30.4979568671162</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P1" ProductName="P1_Gorevi" ReadyTime="0" DueDate="36000" ServiceTime="3978" RequiredSkill="s1">
+                            <LoadInformation>
+                                <Weight>38</Weight>
+                                <Quantity>2</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="163" Name="ct_244" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7469931444713</Latitude>
+                        <Longitude>30.5052560742634</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P3" ProductName="P3_Gorevi" ReadyTime="14400" DueDate="36000" ServiceTime="5334" RequiredSkill="s3">
+                            <LoadInformation>
+                                <Weight>19</Weight>
+                                <Quantity>1</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="177" Name="ct_257" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7480482718888</Latitude>
+                        <Longitude>30.5002681368781</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P5" ProductName="P5_Gorevi" ReadyTime="0" DueDate="14400" ServiceTime="990" RequiredSkill="s5">
+                            <LoadInformation>
+                                <Weight>114</Weight>
+                                <Quantity>6</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="156" Name="ct_238" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7496305670641</Latitude>
+                        <Longitude>30.506625946932</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P4" ProductName="P4_Gorevi" ReadyTime="0" DueDate="14400" ServiceTime="2483" RequiredSkill="s4">
+                            <LoadInformation>
+                                <Weight>19</Weight>
+                                <Quantity>1</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="171" Name="ct_251" Type="Delivery">
+                    <Location>
+                        <Latitude>39.746452326442</Latitude>
+                        <Longitude>30.508062911355</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P1" ProductName="P1_Gorevi" ReadyTime="14400" DueDate="36000" ServiceTime="6209" RequiredSkill="s1">
+                            <LoadInformation>
+                                <Weight>19</Weight>
+                                <Quantity>1</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="197" Name="ct_278" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7506113044915</Latitude>
+                        <Longitude>30.4748565367012</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P5" ProductName="P5_Gorevi" ReadyTime="0" DueDate="36000" ServiceTime="1230" RequiredSkill="s5">
+                            <LoadInformation>
+                                <Weight>38</Weight>
+                                <Quantity>2</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="196" Name="ct_274" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7501186149899</Latitude>
+                        <Longitude>30.4850271583497</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P2" ProductName="P2_Gorevi" ReadyTime="0" DueDate="36000" ServiceTime="5409" RequiredSkill="s2">
+                            <LoadInformation>
+                                <Weight>19</Weight>
+                                <Quantity>1</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="194" Name="ct_272" Type="Delivery">
+                    <Location>
+                        <Latitude>39.752049205708</Latitude>
+                        <Longitude>30.4931617390447</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P2" ProductName="P2_Gorevi" ReadyTime="14400" DueDate="36000" ServiceTime="6490" RequiredSkill="s2">
+                            <LoadInformation>
+                                <Weight>38</Weight>
+                                <Quantity>2</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="195" Name="ct_273" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7507294878616</Latitude>
+                        <Longitude>30.4913278401387</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P4" ProductName="P4_Gorevi" ReadyTime="0" DueDate="14400" ServiceTime="2948" RequiredSkill="s4">
+                            <LoadInformation>
+                                <Weight>76</Weight>
+                                <Quantity>4</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="148" Name="ct_230" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7518838467144</Latitude>
+                        <Longitude>30.4995752811251</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P5" ProductName="P5_Gorevi" ReadyTime="0" DueDate="14400" ServiceTime="1129" RequiredSkill="s5">
+                            <LoadInformation>
+                                <Weight>57</Weight>
+                                <Quantity>3</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="193" Name="ct_271" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7522347604542</Latitude>
+                        <Longitude>30.4943458284013</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P3" ProductName="P3_Gorevi" ReadyTime="0" DueDate="14400" ServiceTime="6430" RequiredSkill="s3">
+                            <LoadInformation>
+                                <Weight>76</Weight>
+                                <Quantity>4</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="144" Name="ct_227" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7527872007616</Latitude>
+                        <Longitude>30.5006797106791</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P4" ProductName="P4_Gorevi" ReadyTime="0" DueDate="14400" ServiceTime="2917" RequiredSkill="s4">
+                            <LoadInformation>
+                                <Weight>95</Weight>
+                                <Quantity>5</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="37" Name="ct_130" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7527906983094</Latitude>
+                        <Longitude>30.5023359429084</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P4" ProductName="P4_Gorevi" ReadyTime="14400" DueDate="36000" ServiceTime="3509" RequiredSkill="s4">
+                            <LoadInformation>
+                                <Weight>38</Weight>
+                                <Quantity>2</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="135" Name="ct_219" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7553293785286</Latitude>
+                        <Longitude>30.4924673416575</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P5" ProductName="P5_Gorevi" ReadyTime="0" DueDate="36000" ServiceTime="2092" RequiredSkill="s5">
+                            <LoadInformation>
+                                <Weight>19</Weight>
+                                <Quantity>1</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="130" Name="ct_214" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7555560928589</Latitude>
+                        <Longitude>30.4928827036558</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P1" ProductName="P1_Gorevi" ReadyTime="14400" DueDate="36000" ServiceTime="4206" RequiredSkill="s1">
+                            <LoadInformation>
+                                <Weight>95</Weight>
+                                <Quantity>5</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="123" Name="ct_208" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7540704696354</Latitude>
+                        <Longitude>30.4944979338986</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P5" ProductName="P5_Gorevi" ReadyTime="0" DueDate="14400" ServiceTime="1161" RequiredSkill="s5">
+                            <LoadInformation>
+                                <Weight>38</Weight>
+                                <Quantity>2</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="109" Name="ct_196" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7552094879753</Latitude>
+                        <Longitude>30.495099005989</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P2" ProductName="P2_Gorevi" ReadyTime="14400" DueDate="36000" ServiceTime="4862" RequiredSkill="s2">
+                            <LoadInformation>
+                                <Weight>19</Weight>
+                                <Quantity>1</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="89" Name="ct_178" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7547410978565</Latitude>
+                        <Longitude>30.500788768375</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P1" ProductName="P1_Gorevi" ReadyTime="0" DueDate="14400" ServiceTime="6860" RequiredSkill="s1">
+                            <LoadInformation>
+                                <Weight>19</Weight>
+                                <Quantity>1</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="45" Name="ct_138" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7548853123846</Latitude>
+                        <Longitude>30.5032655800179</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P4" ProductName="P4_Gorevi" ReadyTime="0" DueDate="14400" ServiceTime="2532" RequiredSkill="s4">
+                            <LoadInformation>
+                                <Weight>114</Weight>
+                                <Quantity>6</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="131" Name="ct_215" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7561126272317</Latitude>
+                        <Longitude>30.4926784734155</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P1" ProductName="P1_Gorevi" ReadyTime="0" DueDate="14400" ServiceTime="6393" RequiredSkill="s1">
+                            <LoadInformation>
+                                <Weight>38</Weight>
+                                <Quantity>2</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="138" Name="ct_221" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7572284651333</Latitude>
+                        <Longitude>30.4909793759297</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P1" ProductName="P1_Gorevi" ReadyTime="0" DueDate="14400" ServiceTime="6331" RequiredSkill="s1">
+                            <LoadInformation>
+                                <Weight>38</Weight>
+                                <Quantity>2</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="99" Name="ct_187" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7567145478254</Latitude>
+                        <Longitude>30.4971347467552</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P5" ProductName="P5_Gorevi" ReadyTime="0" DueDate="36000" ServiceTime="1624" RequiredSkill="s5">
+                            <LoadInformation>
+                                <Weight>38</Weight>
+                                <Quantity>2</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="77" Name="ct_167" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7563518877426</Latitude>
+                        <Longitude>30.4993905111424</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P5" ProductName="P5_Gorevi" ReadyTime="14400" DueDate="36000" ServiceTime="2691" RequiredSkill="s5">
+                            <LoadInformation>
+                                <Weight>76</Weight>
+                                <Quantity>4</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="19" Name="ct_114" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7564739415321</Latitude>
+                        <Longitude>30.5029987603715</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P2" ProductName="P2_Gorevi" ReadyTime="0" DueDate="36000" ServiceTime="6142" RequiredSkill="s2">
+                            <LoadInformation>
+                                <Weight>38</Weight>
+                                <Quantity>2</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="13" Name="ct_109" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7570345045373</Latitude>
+                        <Longitude>30.503858842756</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P5" ProductName="P5_Gorevi" ReadyTime="0" DueDate="14400" ServiceTime="1216" RequiredSkill="s5">
+                            <LoadInformation>
+                                <Weight>95</Weight>
+                                <Quantity>5</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="17" Name="ct_112" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7584031699029</Latitude>
+                        <Longitude>30.5064220033924</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P5" ProductName="P5_Gorevi" ReadyTime="0" DueDate="14400" ServiceTime="2670" RequiredSkill="s5">
+                            <LoadInformation>
+                                <Weight>38</Weight>
+                                <Quantity>2</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="5" Name="ct_101" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7609183797126</Latitude>
+                        <Longitude>30.4988299452924</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P4" ProductName="P4_Gorevi" ReadyTime="0" DueDate="14400" ServiceTime="3438" RequiredSkill="s4">
+                            <LoadInformation>
+                                <Weight>19</Weight>
+                                <Quantity>1</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="8" Name="ct_104" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7597696397295</Latitude>
+                        <Longitude>30.5041602319632</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P5" ProductName="P5_Gorevi" ReadyTime="0" DueDate="14400" ServiceTime="1744" RequiredSkill="s5">
+                            <LoadInformation>
+                                <Weight>19</Weight>
+                                <Quantity>1</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="275" Name="ct_99" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7606326940241</Latitude>
+                        <Longitude>30.5000427153758</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P4" ProductName="P4_Gorevi" ReadyTime="0" DueDate="36000" ServiceTime="2167" RequiredSkill="s4">
+                            <LoadInformation>
+                                <Weight>76</Weight>
+                                <Quantity>4</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="6" Name="ct_102" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7625530886389</Latitude>
+                        <Longitude>30.4993587086198</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P5" ProductName="P5_Gorevi" ReadyTime="14400" DueDate="36000" ServiceTime="1580" RequiredSkill="s5">
+                            <LoadInformation>
+                                <Weight>38</Weight>
+                                <Quantity>2</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="257" Name="ct_81" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7644008278707</Latitude>
+                        <Longitude>30.5057580415737</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P1" ProductName="P1_Gorevi" ReadyTime="0" DueDate="36000" ServiceTime="6885" RequiredSkill="s1">
+                            <LoadInformation>
+                                <Weight>38</Weight>
+                                <Quantity>2</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="258" Name="ct_82" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7643159366101</Latitude>
+                        <Longitude>30.5050524858073</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P2" ProductName="P2_Gorevi" ReadyTime="0" DueDate="36000" ServiceTime="7139" RequiredSkill="s2">
+                            <LoadInformation>
+                                <Weight>19</Weight>
+                                <Quantity>1</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="263" Name="ct_88" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7636633855271</Latitude>
+                        <Longitude>30.5074865397125</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P5" ProductName="P5_Gorevi" ReadyTime="0" DueDate="14400" ServiceTime="2560" RequiredSkill="s5">
+                            <LoadInformation>
+                                <Weight>114</Weight>
+                                <Quantity>6</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="239" Name="ct_65" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7636990797079</Latitude>
+                        <Longitude>30.5114001792101</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P2" ProductName="P2_Gorevi" ReadyTime="0" DueDate="14400" ServiceTime="4692" RequiredSkill="s2">
+                            <LoadInformation>
+                                <Weight>38</Weight>
+                                <Quantity>2</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="229" Name="ct_56" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7631783233305</Latitude>
+                        <Longitude>30.5130615001306</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P5" ProductName="P5_Gorevi" ReadyTime="0" DueDate="36000" ServiceTime="2512" RequiredSkill="s5">
+                            <LoadInformation>
+                                <Weight>38</Weight>
+                                <Quantity>2</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="215" Name="ct_43" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7645825287224</Latitude>
+                        <Longitude>30.5172152584014</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P5" ProductName="P5_Gorevi" ReadyTime="14400" DueDate="36000" ServiceTime="1121" RequiredSkill="s5">
+                            <LoadInformation>
+                                <Weight>57</Weight>
+                                <Quantity>3</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="113" Name="ct_2" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7667526593892</Latitude>
+                        <Longitude>30.5020574519623</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P3" ProductName="P3_Gorevi" ReadyTime="0" DueDate="14400" ServiceTime="7172" RequiredSkill="s3">
+                            <LoadInformation>
+                                <Weight>38</Weight>
+                                <Quantity>2</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+                <Node No="200" Name="ct_3" Type="Delivery">
+                    <Location>
+                        <Latitude>39.7686539957419</Latitude>
+                        <Longitude>30.5022181344172</Longitude>
+                        <X_Coordinates>-1</X_Coordinates>
+                        <Y_Coordinates>-1</Y_Coordinates>
+                    </Location>
+                    <Requests>
+                        <Request ProductId="P3" ProductName="P3_Gorevi" ReadyTime="14400" DueDate="36000" ServiceTime="7116" RequiredSkill="s3">
+                            <LoadInformation>
+                                <Weight>95</Weight>
+                                <Quantity>5</Quantity>
+                            </LoadInformation>
+                        </Request>
+                    </Requests>
+                </Node>
+            </Nodes>
+        </CEVRPTW>
+        <PerformanceMeasure>
+            <ObjectiveFunction Name="MinDistance" />
+        </PerformanceMeasure>
+    </Task>
+</Info4Task>
