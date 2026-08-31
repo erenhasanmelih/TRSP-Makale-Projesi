@@ -30,12 +30,16 @@ Kullanıcının F-listesinde önerdiği formül şuydu: `M_ij = max(0, lc[i] + s
 
 Modelde `|katsayı| >= 99999` olan terim sayısı: **0** (öncesinde `100000.0` kullanan onlarca terim vardı). R5 problem setinde Gurobi 13 ile OPTIMAL çözüm (EV: `obj=10116.10`, CV: `obj=10116.10`).
 
+## Güncelleme (2026-08-22)
+
+`raw/CV_model_gurobi_exact.py`/`raw/EV_v.1.1.py` (bu sayfanın "orijinal sabit `100000.0`" olarak gösterdiği dosyalar) 2026-08-22'de değişti. **`raw/`'un kendisi artık sabit `100000.0` içermiyor** — kendi tight-M formüllerini kullanıyor (Faz 2'nin C2 formülleriyle kavramsal olarak benzer ama farklı ifadeler, örn. `bigM = a_max + ls[t_] + (ll[t_]-el[t_])`). Bu, C2'nin hedeflediği sonuca `raw/`'da da (bağımsız bir yoldan) ulaşılmış olduğu anlamına geliyor. Detay: [[parametre_big_m_100000]] güncellemesi, [[sources/2026-08-22-cv_model_gurobi_exact_v1_1]].
+
 ## Sources
 
 - `src/EV_v_1_1_fixed.py` (çoklu satır: 272-283, 315, 333, 368, 534-548)
 - `src/CV_model_gurobi_fixed.py` (çoklu satır: 184-190, 222, 242, 273, 415-422)
-- `raw/CV_model_gurobi_exact.py` (orijinal sabit `100000.0`)
-- `raw/EV_v.1.1.py` (orijinal sabit `100000.0`)
+- `raw/CV_model_gurobi_exact.py` (orijinal sabit `100000.0` — eski, 2026-08-09 hâli)
+- `raw/EV_v.1.1.py` (orijinal sabit `100000.0` — eski, 2026-08-09 hâli)
 
 ## Related
 

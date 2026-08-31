@@ -28,10 +28,16 @@ Bu eksiklik **CV kodu için tam doğrulandı**: `CV_model_gurobi_exact.py`'de is
 
 **CV tarafı: değişmedi.** `src/CV_model_gurobi_fixed.py`'de de istasyon kümesi/rota-ortası yakıt alma mantığı yok — Faz 2, CV'nin istasyon eksikliğini gidermedi (Faz 2'nin CV'ye kattığı şeyler A6 non-overlap portlaması ve A7 yakıt tüketim oranı düzeltmesiydi, istasyon yapısı değil). `Fc`/`alpha` hâlâ kullanılmıyor — bkz. [[sorun_cv_kullanilmayan_istasyon_parametreleri]].
 
+## Güncelleme (2026-08-22)
+
+**CV tarafı:** hâlâ değişmedi — `raw/xml_data_loader.py` hâlâ `Fc=[0]` döndürüyor, gerçek istasyon listesi yok. `Fc`/`g_c`/`lc0` artık CV kodunda referans ediliyor ama pratik etkisi sıfır (bkz. [[sorun_cv_kullanilmayan_istasyon_parametreleri]] güncellemesi).
+
+**EV tarafı — durum belirsizleşti:** `S`/`S_set` (gerçek istasyon listesi, `Kalabak_Info4ChargingStations.xml`'den) hâlâ aktif ve kullanılıyor. Ama EV18/EV19'un (eski c20/c21'in karşılığı) istasyon düğümlerinde bir atlama/istisna içermediği gözlemlendi — bu, Faz 2'nin A1 düzeltmesinin (istasyonlarda şarjın gerçekten akışa yansıması için gerekli olan atlama) yeni `raw/EV_v.1.1.py`'ye hiç taşınmadığı anlamına gelebilir. Doğrulanmadı, bkz. [[sorun_v1_1_raw_faz2_duzeltmelerini_miras_almadi]] (`status: taslak`, kasıtlı olarak dokunulmadı). Eğer bu okuma doğruysa, "EV'de istasyon şarjı çalışıyor" iddiası yeniden sorgulanabilir hâle geliyor.
+
 ## Sources
 
 - `raw/Yönergelerimiz/kodda ve matematiksel modeldeki farklılıklar.docx`
-- `raw/CV_model_gurobi_exact.py:13-27` (kullanılmayan Fc/alpha)
+- `raw/CV_model_gurobi_exact.py:13-27` (kullanılmayan Fc/alpha, eski 2026-08-09 hâli)
 - `raw/EV_v.1.1.py:329-353` (aktif istasyon kısıtları)
 - `src/EV_v_1_1_fixed.py:472-531` (A1 düzeltmesi)
 - `src/CV_model_gurobi_fixed.py` (istasyon yapısı hâlâ yok)
@@ -43,6 +49,4 @@ Bu eksiklik **CV kodu için tam doğrulandı**: `CV_model_gurobi_exact.py`'de is
 - [[sorun_cv_kullanilmayan_istasyon_parametreleri]]
 - [[karar_klon_dugum_sarj_istasyonu_plani]]
 - [[sources/2026-08-09-kodda_ve_matematiksel_modeldeki_farkliliklar]]
-- [[sources/2026-08-09-cv_model_gurobi_exact]]
-- [[sources/2026-08-09-ev_v1_1]]
 - [[karar_a1_ev_sarj_c20_c21_duzeltmesi]]

@@ -37,10 +37,28 @@ for i in ...:
 
 Bu düzeltme [[karar_partial_charging_denklemleri_entegrasyonu_plani]]'nın "kısmi şarj etkisiz" alt-sorununu giderdi, ama planın asıl hedefi olan Keskin & Çatay (2016) tam eşitlik denklemleri hâlâ yok. `ye`/`YE` hâlâ sadece `<=` eşitsizliklerle bağlı (eşitlik değil) — bu, yeni bir raporlama sorununa yol açtı, bkz. [[sorun_ye_ye_esitsizlik_kismi_sarj_raporlama_hatasi]].
 
+## Güncelleme 2 (2026-08-22, trsp-exact-model-mimari) — raw/'a uygulandı
+
+Yukarıdaki "doğrulanmadı" notu artık geçerli değil: A1 kusuru yeni `raw/EV_v.1.1.py`'de
+**gerçekten yeniden ortaya çıkmıştı** ve 2026-08-22'de Gurobi ile doğrulanıp doğrudan
+`raw/EV_v.1.1.py:376-399`'da düzeltildi (`S_set = set(S)` + `if i not in S_set`).
+Kanıt (C5, Q=600 Wh, rota sabit `0→1→5→8→4→0`): kusurlu hâlde **INFEASIBLE**, IIS'te
+istasyon çıkış yayındaki EV-18 kısıtı yer alıyor; düzeltilmiş hâlde **FEASIBLE**,
+istasyon 8'de `ye=0.0 → YE=337.2 Wh` ve bu enerji sonraki bacakta kullanılıyor.
+Ayrıntı: [[sorun_v1_1_raw_faz2_duzeltmelerini_miras_almadi]] (§Doğrulama Sonucu).
+
+Ek olarak, A1'in yanı sıra aynı kısıt bloğunda çok daha ağır bir hata bulundu
+(EV-17/18/19'un depo yaylarını kapsaması ⇒ her rota infeasible):
+[[sorun_ev_depo_yaylarinda_dongusel_infeasibility]].
+
+## Güncelleme (2026-08-22)
+
+Bu sayfanın "orijinal, hatalı davranışın kaynağı" olarak gösterdiği `raw/EV_v.1.1.py` artık **farklı bir içeriğe sahip** (2026-08-22, Eren onaylı v1.1 yeniden yazımı) — bkz. [[karar_src_klasoru_ve_raw_izolasyonu]] (GÜNCELLEME bölümü). Yeni `raw/EV_v.1.1.py`'nin bu A1 düzeltmesini miras alıp almadığı **doğrulanmadı**; statik okumaya dayalı bir gözlem, aynı mimari desenin (istasyon istisnası olmadan yazılan EV18/EV19) yeni kodda da göründüğünü işaret ediyor. Bkz. [[sorun_v1_1_raw_faz2_duzeltmelerini_miras_almadi]] (`status: taslak`, kasıtlı olarak doğrulanmadı/dokunulmadı).
+
 ## Sources
 
 - `src/EV_v_1_1_fixed.py:472-531`
-- `raw/EV_v.1.1.py:306-353` (orijinal, hatalı davranışın kaynağı)
+- `raw/EV_v.1.1.py:306-353` (orijinal, hatalı davranışın kaynağı — eski, 2026-08-09 hâli)
 
 ## Related
 

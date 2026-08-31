@@ -33,6 +33,8 @@ Bu teknik `src/CV_model_gurobi_fixed.py` ve `src/EV_v_1_1_fixed.py`'de uyguland�
 
 ## Related
 
+- [[karar_rc13_tam_paket_uygulamasi]] (Ö7a UYGULANDI — EV-6/7/17/30 ve CV-8/19/31 düğüm-bazlı sıkı Big-M'e geçirildi, `w<=x` gözlemiyle mola teriminin Big-M'den düşürülebildiği de bulundu)
+- [[sorun_rc13_darbogaz_kok_neden_analizi]] (RC13'te düğüm bazlı sıkı M tek başına LP sınırını değiştirmedi, ama `bwp` ile birlikte dolaylı katkı sağlıyor)
 - [[karar_tight_big_m_gecisi_plani]]
 - [[gurobi_mip_cozucusu]]
 - [[literatur_alternatif_metasezgiseller]]

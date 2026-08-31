@@ -36,12 +36,16 @@ status: güncel
 
 Bu karar [[karar_c2_tight_big_m_uygulamasi]] (C2, sabit `100000.0`'ın türetilmiş M'lerle değiştirilmesi) ile aynı genel "tight Big-M" temasının parçası ama ayrı bir sorun kodudur (A4) — çünkü buradaki asıl motivasyon sadece performans değil, **infeasibility riskini gidermek**.
 
+## Güncelleme (2026-08-22)
+
+`raw/EV_v.1.1.py`/`raw/CV_model_gurobi_exact.py` (bu sayfanın "orijinal koşulsuz c16/c17/c18" olarak gösterdiği dosyalar) 2026-08-22'de değişti. Yeni kodda CV15/16/18 ve EV13/14/16 (zaman penceresi/mesai) kısıtları hâlâ, kaynağın (`kk`) o düğüme yetkinlik açısından uygun olup olmadığından bağımsız olarak, **tüm `(i,kk)` çiftleri için koşulsuz** yazılıyor (A4'ün çözmeye çalıştığı desenle aynı yapı) — ama mevcut veri setinde tüm ekiplere aynı `es`/`ls`/`el`/`ll` atandığından (`data['es'] = {crew: base_es for crew in T_list}` gibi), bu pratikte bir infeasibility riski yaratmıyor gibi görünüyor. Doğrulanmadı, kapsamlı bir statik okuma değil — sadece bir gözlem. Bkz. [[sources/2026-08-22-cv_model_gurobi_exact_v1_1]], [[sources/2026-08-22-ev_v1_1_rewrite]].
+
 ## Sources
 
 - `src/EV_v_1_1_fixed.py:343-380,455-468`
 - `src/CV_model_gurobi_fixed.py:252-290`
-- `raw/EV_v.1.1.py` (orijinal koşulsuz c16/c17/c18)
-- `raw/CV_model_gurobi_exact.py` (orijinal koşulsuz c16/c17/c18)
+- `raw/EV_v.1.1.py` (orijinal koşulsuz c16/c17/c18 — eski, 2026-08-09 hâli)
+- `raw/CV_model_gurobi_exact.py` (orijinal koşulsuz c16/c17/c18 — eski, 2026-08-09 hâli)
 
 ## Related
 

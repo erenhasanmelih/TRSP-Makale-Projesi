@@ -10,7 +10,7 @@ status: güncel
 
 ## Sorun
 
-[[karar_ev_teknisyen_cakisma_onleme_mekanizmasi]]'nda belgelenen mantık boşluğu: EV modelinde (`raw/EV_v.1.1.py:225-299`) aynı teknisyenin farklı ikili ekiplerde (bkz. [[karar_dinamik_teknisyen_ekibi_itertools_combinations]]) aynı gün çakışan saatlerde aktif olmasını engelleyen bir mekanizma (`route_start`/`route_end`/`ord_*`/`noov_1`/`noov_2`) var, ama bu mekanizma **CV modelinde hiç yoktu**. CV kodu aynı `itertools.combinations` ekip oluşturma mantığını kullandığı için aynı fiziksel imkânsızlık (bir teknisyenin aynı anda iki farklı CV ekibinde olması) CV modelinde matematiksel olarak engellenmiyordu.
+karar_ev_teknisyen_cakisma_onleme_mekanizmasi (silindi)'nda belgelenen mantık boşluğu: EV modelinde (`raw/EV_v.1.1.py:225-299`) aynı teknisyenin farklı ikili ekiplerde (bkz. [[karar_dinamik_teknisyen_ekibi_itertools_combinations]]) aynı gün çakışan saatlerde aktif olmasını engelleyen bir mekanizma (`route_start`/`route_end`/`ord_*`/`noov_1`/`noov_2`) var, ama bu mekanizma **CV modelinde hiç yoktu**. CV kodu aynı `itertools.combinations` ekip oluşturma mantığını kullandığı için aynı fiziksel imkânsızlık (bir teknisyenin aynı anda iki farklı CV ekibinde olması) CV modelinde matematiksel olarak engellenmiyordu.
 
 ## Karar
 
@@ -28,6 +28,10 @@ R5 problem setinde:
 - `route_start_*`/`route_end_*`: **130 adet**.
 - Gurobi 13 ile OPTIMAL çözüm, `obj=10116.10` (EV ile aynı).
 
+## Güncelleme (2026-08-22)
+
+Bu kararın portladığı orijinal mekanizma (`raw/EV_v.1.1.py:225-299`, `route_start`/`route_end`/`ord_*`) artık **`raw/EV_v.1.1.py`'de yok** — 2026-08-22 yeniden yazımı bu mekanizmayı tamamen kaldırdı (bkz. karar_ev_teknisyen_cakisma_onleme_mekanizmasi, sayfası 2026-08-22'de silindi). `src/CV_model_gurobi_fixed.py`'deki A6 portlaması **etkilenmedi** (src/ dosyaları değişmedi) — hâlâ geçerli ve çalışır durumda. Ama `raw/`'un kendisi artık aynı kaygıyı (teknisyen çakışması) **farklı, daha genel bir mekanizmayla** (`z`/CV-28, atama-tekilliği tabanlı, zaman penceresi hesabı gerektirmeyen) çözüyor — bkz. [[karar_v1_1_coklu_sefer_ve_z_tekillik_kisitlari]]. Yani A6'nın çözmeye çalıştığı sorun `raw/`'da da (bağımsız bir yoldan) kapatılmış durumda, src/'deki A6 kaydı hâlâ tarihsel/geçerli.
+
 ## Sources
 
 - `src/CV_model_gurobi_fixed.py:16-19,28,292-369,657-673`
@@ -36,7 +40,5 @@ R5 problem setinde:
 
 ## Related
 
-- [[karar_ev_teknisyen_cakisma_onleme_mekanizmasi]]
 - [[karar_dinamik_teknisyen_ekibi_itertools_combinations]]
-- [[degisken_route_start_route_end_ev]]
 - [[karar_src_klasoru_ve_raw_izolasyonu]]

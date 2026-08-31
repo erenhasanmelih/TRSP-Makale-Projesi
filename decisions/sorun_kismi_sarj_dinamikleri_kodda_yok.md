@@ -26,8 +26,9 @@ Bu iddia `EV_v.1.1.py` için **tam doğru değil**. Kodda `c8_zaman_ilerleme` k�
 
 ## Related
 
+- [[karar_rc13_tam_paket_uygulamasi]] (Ö8 UYGULANDI, 2026-08-29 — `Delta_s` kaldırıldı, EV-6/10/15 gerçek şarj terimine (`g_e*(YE-ye)`) geçirildi, EV-17'ye eksik mola terimi eklendi; pratik etkisi bugün sıfır çünkü Ö6 zaten istasyonları düşürüyor)
+- [[sorun_rc13_darbogaz_kok_neden_analizi]] (§7.2: `Delta_s` fiilen ölü değişken — amaç fonksiyonunda yok, her optimal çözümde 0)
 - [[partial_recharging]]
 - [[sorun_ev_enerji_tuketim_modeli_basitlestirilmis]]
 - [[karar_partial_charging_denklemleri_entegrasyonu_plani]]
 - [[klon_dugum_node_replication]]
-- [[sources/2026-08-09-ev_v1_1]]

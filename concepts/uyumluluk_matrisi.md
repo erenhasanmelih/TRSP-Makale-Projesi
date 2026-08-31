@@ -32,6 +32,8 @@ Uyumluluk mantığı hâlâ Gurobi kısıtı olarak değil, veri/model kurma aş
 
 ## Related
 
+- [[karar_rc13_asgari_paket_uygulamasi]] (Ö1 UYGULANDI — `x`/`w` artık yetkinliksiz `(i,j,kk)` için `UB=0`)
+- [[sorun_rc13_darbogaz_kok_neden_analizi]] (`x` üzerinde uygulanmamış yetkinlik filtresi, RC13'te `NumVars` %-70 kazanç kaynağı — Ö1)
 - [[colored_tsp]]
 - [[karar_uyumluluk_matrisi_cizelgeleme_plani]]
 - [[model_karar_degiskenleri_ve_parametreleri]]

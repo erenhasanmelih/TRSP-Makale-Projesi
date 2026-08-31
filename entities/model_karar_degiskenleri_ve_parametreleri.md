@@ -8,7 +8,7 @@ status: güncel
 
 # Model Karar Değişkenleri ve Parametreleri (Genel Bakış)
 
-Bu sayfa, yönerge belgelerinde ve kodda adı geçen karar değişkenlerinin ve parametrelerin üst düzey envanteridir. Kod seviyesindeki tam tanımlar Stage 2 ingest'inde (`CV_model_gurobi_exact.py`, `EV_v.1.1.py`) doğrulandı — detaylı sayfalar için aşağıdaki tabloya ve [[degisken_x_arc_tahsisi]], [[degisken_yakit_enerji_izleme]], [[parametre_big_m_100000]], [[parametre_mola_zaman_sabitleri]], [[degisken_route_start_route_end_ev]] sayfalarına bakın.
+Bu sayfa, yönerge belgelerinde ve kodda adı geçen karar değişkenlerinin ve parametrelerin üst düzey envanteridir. Kod seviyesindeki tam tanımlar Stage 2 ingest'inde (`CV_model_gurobi_exact.py`, `EV_v.1.1.py`) doğrulandı — detaylı sayfalar için aşağıdaki tabloya ve [[degisken_x_arc_tahsisi]], [[degisken_yakit_enerji_izleme]], [[parametre_big_m_100000]], [[parametre_mola_zaman_sabitleri]], degisken_route_start_route_end_ev (silindi) sayfalarına bakın.
 
 ## Planlanan / tartışılan değişkenler ve parametreler
 
@@ -30,8 +30,8 @@ Bu sayfa, yönerge belgelerinde ve kodda adı geçen karar değişkenlerinin ve 
 | Varış zamanı | `tau[i,t]` | `tau[i,t]` | — |
 | Mola indikatörü | `w[i,j,t]` | `w[i,j,t]` | — |
 | Yakıt/enerji | `yc`/`YC` | `ye`/`YE` | [[degisken_yakit_enerji_izleme]] |
-| Ekip rota göstergesi | yok | `y_route[t]` | [[sources/2026-08-09-ev_v1_1]] |
-| Ekip çakışma önleme | yok | `route_start`/`route_end`/`ord_*` | [[degisken_route_start_route_end_ev]] |
+| Ekip rota göstergesi | yok | `y_route[t]` | 2026-08-09-ev_v1_1 (silindi) |
+| Ekip çakışma önleme | yok | `route_start`/`route_end`/`ord_*` | degisken_route_start_route_end_ev (silindi) |
 | Kullanılmayan | `L[i,t]`, `alpha[Fc,Vc]` | `L[i,t]` | [[sorun_cv_kullanilmayan_istasyon_parametreleri]] |
 
 ## Faz 2 uygulama tablosu (2026-08-11) — `src/EV_v_1_1_fixed.py` / `src/CV_model_gurobi_fixed.py`
@@ -51,6 +51,22 @@ Bu sayfa, yönerge belgelerinde ve kodda adı geçen karar değişkenlerinin ve 
 | — | `tau_ub[i]` istasyon/depo ufuk sapması | Yeni, ürün kararı bekliyor | [[sorun_tau_ub_istasyon_depo_ufuk_sapmasi]] |
 
 Doğrulama: R5 problem setinde Gurobi 13 ile OPTIMAL çözüm (EV: obj=10116.10, CV: obj=10116.10). Kod haritası ve `raw/` izolasyon gerekçesi: [[karar_src_klasoru_ve_raw_izolasyonu]].
+
+## v1.1 uygulama tablosu (2026-08-22) — raw/'un kendisi (src/'den bağımsız)
+
+`raw/CV_model_gurobi_exact.py`/`raw/EV_v.1.1.py`'nin 2026-08-22 yeniden yazımı, Faz 2 uygulama tablosundaki bazı "planlanan" satırları `src/`'den **bağımsız olarak** `raw/`'un kendisinde de fiilen ele aldı — ama farklı bir mekanizmayla ve bazı Faz 2 kazanımlarını miras almadan:
+
+| Konu | v1.1 raw/ durumu | Faz 2 (src/) ile ilişki |
+|---|---|---|
+| 4B→3B `x[i,j,k]` | Uygulandı (`kk` tuple, `kk_name`) | Kavramsal olarak aynı, bağımsız uygulama |
+| Sabit `100000.0` Big-M | Kaldırıldı, tight-M formülleri | Kavramsal olarak aynı, bağımsız uygulama |
+| Çoklu sefer (≤3) | **Yeni** — hem CV hem EV'de (CV-4/EV-4) | Faz 2 kapsamında değildi |
+| Araç-ekip/teknisyen tekilliği | **Yeni** — `z`/`z_veh`, CV-27/28, EV-22/23 | Faz 2'nin A6'sından farklı mekanizma (zaman-penceresi değil, atama-tekilliği) |
+| A1 (EV şarj c20/c21) | **Muhtemelen miras alınmadı** (doğrulanmadı) | Bkz. [[sorun_v1_1_raw_faz2_duzeltmelerini_miras_almadi]] |
+| A7 (CV h_c sabiti) | **Muhtemelen miras alınmadı** (doğrulanmadı) | Bkz. [[sorun_v1_1_raw_faz2_duzeltmelerini_miras_almadi]] |
+| A6 (teknisyen çakışma) | Farklı mekanizmayla (z-tabanlı) kapatıldı | `src/CV_model_gurobi_fixed.py`'deki A6 portlaması etkilenmedi |
+
+Detay: [[karar_v1_1_coklu_sefer_ve_z_tekillik_kisitlari]], [[karar_src_klasoru_ve_raw_izolasyonu]] (GÜNCELLEME bölümü), [[sources/2026-08-22-cv_model_gurobi_exact_v1_1]], [[sources/2026-08-22-ev_v1_1_rewrite]].
 
 ## Sources
 
@@ -72,7 +88,6 @@ Doğrulama: R5 problem setinde Gurobi 13 ile OPTIMAL çözüm (EV: obj=10116.10,
 - [[gurobi_mip_cozucusu]]
 - [[degisken_x_arc_tahsisi]]
 - [[degisken_yakit_enerji_izleme]]
-- [[degisken_route_start_route_end_ev]]
 - [[karar_a2_c1_birlesik_k_indeksi_ve_enerji_indeksleme]]
 - [[karar_c2_tight_big_m_uygulamasi]]
 - [[karar_a1_ev_sarj_c20_c21_duzeltmesi]]

@@ -27,10 +27,10 @@ status: güncel
 | 9 | Dinamik teknisyen ekibi (itertools.combinations) | Kod-only ek esneklik | **Doğrulandı** — CV+EV ortak | [[karar_dinamik_teknisyen_ekibi_itertools_combinations]] |
 | 10 | Molasız erken dönüş kuralı | Kod-only ek esneklik | **Doğrulandı** — çelişki #2'yi telafi ediyor | [[karar_molasiz_erken_donus_kurali_kod]] |
 | 11 | Operasyonel zaman kaydırma (+28800) | Kod-only, zararsız | **Doğrulandı** — saf raporlama, model-kod çelişkisi değil | [[karar_operasyonel_zaman_kaydirma_format_time]] |
-| 12 | EV teknisyen çakışma önleme mekanizması | Kod-only, yönergede yok | **Yeni bulgu (Stage 2)** — CV'de karşılığı yok, potansiyel CV mantık boşluğu | [[karar_ev_teknisyen_cakisma_onleme_mekanizmasi]] |
-| 13 | EV feasibility-odaklı Gurobi tuning + IIS diagnostik | Kod-only, workaround | **Yeni bulgu (Stage 2)** — yapısal düzeltme değil, geçici çözücü ayarı | [[karar_ev_feasibility_gurobi_tuning_ve_diagnostik]] |
+| 12 | EV teknisyen çakışma önleme mekanizması | Kod-only, yönergede yok | **Yeni bulgu (Stage 2)** — CV'de karşılığı yok, potansiyel CV mantık boşluğu | karar_ev_teknisyen_cakisma_onleme_mekanizmasi (silindi) |
+| 13 | EV feasibility-odaklı Gurobi tuning + IIS diagnostik | Kod-only, workaround | **Yeni bulgu (Stage 2)** — yapısal düzeltme değil, geçici çözücü ayarı | karar_ev_feasibility_gurobi_tuning_ve_diagnostik (silindi) |
 
-(Madde 10'daki orijinal docx numaralandırmasındaki "otomatik docx raporlama" [[karar_ev_otomatik_docx_raporlama]] bu tabloya dahil edilmedi çünkü model-kod farkı değil, salt bir çıktı-üretim mekanizması açıklaması.)
+(Madde 10'daki orijinal docx numaralandırmasındaki "otomatik docx raporlama" karar_ev_otomatik_docx_raporlama (silindi) bu tabloya dahil edilmedi çünkü model-kod farkı değil, salt bir çıktı-üretim mekanizması açıklaması.)
 
 ## Kategorilere göre değerlendirme
 
@@ -71,8 +71,6 @@ Stage 2 doğrulaması, docx'ün orijinal 10 maddesinden **hiçbirinin olduğu gi
 ## Sources
 
 - [[sources/2026-08-09-kodda_ve_matematiksel_modeldeki_farkliliklar]]
-- [[sources/2026-08-09-cv_model_gurobi_exact]]
-- [[sources/2026-08-09-ev_v1_1]]
 - `raw/CV_model_gurobi_exact.py`
 - `raw/EV_v.1.1.py`
 
@@ -88,5 +86,3 @@ Stage 2 doğrulaması, docx'ün orijinal 10 maddesinden **hiçbirinin olduğu gi
 - [[karar_dinamik_teknisyen_ekibi_itertools_combinations]]
 - [[karar_molasiz_erken_donus_kurali_kod]]
 - [[karar_operasyonel_zaman_kaydirma_format_time]]
-- [[karar_ev_teknisyen_cakisma_onleme_mekanizmasi]]
-- [[karar_ev_feasibility_gurobi_tuning_ve_diagnostik]]

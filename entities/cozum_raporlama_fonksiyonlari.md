@@ -20,13 +20,22 @@ Aynı amaçla ama EV'ye özgü ek bilgilerle: her adımda **Varış SoC**, **Ç�
 
 Her ikisi de rotaları `x[i,j,v,t].X > 0.5` filtreleyerek arc listesine, sonra `next_map` ile sıralı bir rotaya (`route`) dönüştürüyor — aynı algoritma iki dosyada da tekrarlanıyor (kod paylaşımı/kopyalama izlenimi, bkz. [[build_model_fonksiyonu]]).
 
+## Güncelleme (2026-08-22) — EV artık CV ile simetrik, ikisi de çoklu-sefer farkında
+
+`raw/CV_model_gurobi_exact.py:430-583` ve `raw/EV_v.1.1.py:379-520`'deki 2026-08-22 sürümleri, önceki sürümdeki asimetriyi (EV'nin SoC/şarj sütunlu özel tablo formatı, Tee/docx otomatik kaydı) ortadan kaldırdı — **iki fonksiyon artık neredeyse birebir aynı** (yalnızca emoji ve başlık farklı: CV `📌`, EV `🔋`). İkisi de artık **çoklu sefer farkında** (CV-4/EV-4, ≤3): `depot_departures`/`next_map` ile arc'lar önce sefer (trip) listelerine ayrıştırılıyor, her sefer ayrı raporlanıyor. Çıktı hâlâ `.txt` dosyasına yazılıyor (`Operasyon_Raporu_<problem>.txt` / `Operasyon_Raporu_EV_<problem>.txt`), EV artık `.docx` üretmiyor (bkz. karar_ev_otomatik_docx_raporlama, sayfası 2026-08-22'de silindi). Aynı arc→trip ayrıştırma mantığı üçüncü kez `raw/solution_validator.py`'de de tekrarlanıyor — bkz. [[solution_validator_fonksiyonlari]].
+
 ## Sources
 
-- `raw/CV_model_gurobi_exact.py:210-310`
-- `raw/EV_v.1.1.py:394-513`
+- `raw/CV_model_gurobi_exact.py:210-310` (eski, 2026-08-09 hâli)
+- `raw/EV_v.1.1.py:394-513` (eski, 2026-08-09 hâli)
+- `raw/CV_model_gurobi_exact.py:430-583` (yeni, 2026-08-22)
+- `raw/EV_v.1.1.py:379-520` (yeni, 2026-08-22)
 
 ## Related
 
 - [[format_time_fonksiyonu]]
 - [[degisken_yakit_enerji_izleme]]
 - [[build_model_fonksiyonu]]
+- [[sorun_rapor_mola_suresi_3600_vs_ll_el]]
+- [[sorun_rapor_unicode_cokme_log_print]]
+- [[sorun_coklu_sefer_zaman_sirasi_ihlali]]

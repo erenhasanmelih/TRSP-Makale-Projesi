@@ -32,10 +32,18 @@ Sabit `lc0=100000.0` (CV `__main__`) yerine `tau_ub[i]` artık istasyon/depo dü
 
 Tam uygulama kaydı ve sapma notu (kullanıcının `-ec[j]` önerisinin neden kullanılmadığı dahil): [[karar_c2_tight_big_m_uygulamasi]]. Doğrulama: modelde `|katsayı|>=99999` olan terim sayısı 0 (öncesinde çoktu). R5'te Gurobi 13 ile OPTIMAL (EV/CV obj=10116.10).
 
+## Güncelleme (2026-08-22) — raw/'da da artık sabit 100000.0 YOK
+
+`raw/CV_model_gurobi_exact.py` ve `raw/EV_v.1.1.py`'nin 2026-08-22 yeniden yazımı, bu sayfanın başlığındaki sabit `100000.0` deseninin **kendisini `raw/`'dan da kaldırdı** — Faz 2'nin `src/`'de yaptığına kavramsal olarak benzer (ama bağımsız, farklı formüllü) bir "tight Big-M" yaklaşımı artık `raw/`'un kendisinde de var: her Big-M ifadesi zaman penceresi/mesai parametrelerinden türetiliyor (örn. CV6/EV6: `bigM = a_max + ls[t_] + (ll[t_]-el[t_])`; CV14: `bigM = ls[t_] - ll[t_]`). Yukarıdaki tablo artık **eski `raw/` durumuna ait bir tarihsel kayıttır** (satır referansları eski koda göre, `git show HEAD:raw/...` ile erişilebilir).
+
+Tek istisna: `data['lc0']` (CV, `40000.0`) / `data['lc_0']` (EV, `10000.0`) — ayrı bir "büyük sabit", ama artık ölü değil, CV19/EV17'nin (yakıt/enerji-zaman ilerlemesi) formülüne fiilen giriyor (`(lc0 + g_c*G[kk[0]])`). Bu, eski `lc0=100000.0`'dan farklı bir amaçla (menzil ölçekli bir üst sınır) kullanılıyor. Detaylı analiz: [[sources/2026-08-22-cv_model_gurobi_exact_v1_1]], [[sources/2026-08-22-ev_v1_1_rewrite]].
+
 ## Sources
 
-- `raw/CV_model_gurobi_exact.py` (çoklu satır: 83, 105, 119, 123, 189, 193, 381)
-- `raw/EV_v.1.1.py` (çoklu satır: 172, 192, 204, 208, 373, 377)
+- `raw/CV_model_gurobi_exact.py` (eski, 2026-08-09 hâli — çoklu satır: 83, 105, 119, 123, 189, 193, 381)
+- `raw/EV_v.1.1.py` (eski, 2026-08-09 hâli — çoklu satır: 172, 192, 204, 208, 373, 377)
+- `raw/CV_model_gurobi_exact.py` (yeni, 2026-08-22 — sabit `100000.0` yok, bkz. yukarıdaki güncelleme)
+- `raw/EV_v.1.1.py` (yeni, 2026-08-22 — sabit `100000.0` yok)
 - `src/CV_model_gurobi_fixed.py` (çoklu satır: 184-190, 222, 242, 273)
 - `src/EV_v_1_1_fixed.py` (çoklu satır: 272-283, 315, 333, 368)
 
@@ -47,3 +55,4 @@ Tam uygulama kaydı ve sapma notu (kullanıcının `-ec[j]` önerisinin neden ku
 - [[karar_c2_tight_big_m_uygulamasi]]
 - [[karar_a4_zaman_penceresi_bigm_kosullandirma]]
 - [[sorun_tau_ub_istasyon_depo_ufuk_sapmasi]]
+- [[sorun_ev17_big_m_gecersiz_kucuk]]

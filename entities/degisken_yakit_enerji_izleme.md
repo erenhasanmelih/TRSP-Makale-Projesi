@@ -36,10 +36,18 @@ Tüketim katsayısı da artık araç-bazlı: `he_of_k[k]` (EV), `hc_of_k[k]` (CV
 
 Tam refaktör kaydı: [[karar_a2_c1_birlesik_k_indeksi_ve_enerji_indeksleme]].
 
+## Güncelleme (2026-08-22) — raw/ hâlâ düğüm-bazlı tek-indisli, olası A1 regresyonu
+
+`raw/CV_model_gurobi_exact.py`/`raw/EV_v.1.1.py`'nin 2026-08-22 yeniden yazımında `yc`/`YC` (CV) ve `ye`/`YE` (EV) **hâlâ yalnızca düğüm-bazlı tek-indisli** (`YC = m.addVars(N0, ...)`, `ye = m.addVars(Np, ...)`) — Faz 2'nin `src/`'de yaptığı gibi `(düğüm, k)` çok-indisli hâle **getirilmemiş**. Araç kapasitesi yine de `G[kk[0]]`/`Q[kk[0]]` ile araç-bazlı doğru uygulanıyor (heterojen filo desteği kısmi — kapasite doğru ama enerji seviyesi düğüm başına tek değer, birden fazla kaynağın aynı düğümü paylaşması durumunda teorik bir belirsizlik olabilir; pratikte CV2/EV2 her müşteriyi tam bir kaynağa atadığı için sorun çıkmıyor).
+
+**Olası regresyon (doğrulanmadı):** Yeni `raw/EV_v.1.1.py`'de EV18/EV19 (CV20/21'in EV karşılığı), istasyon düğümlerinde herhangi bir atlama/istisna olmadan yazılıyor — Faz 2'nin A1 olarak adlandırdığı mimari kusurla (varış-enerjisi zincirinin şarj-sonrası zinciri ezmesi) aynı desen. Ayrıntı, kapsam sınırı ve doğrulanmamışlık uyarısı: [[sorun_v1_1_raw_faz2_duzeltmelerini_miras_almadi]] (bilinçli olarak `status: taslak`, bu sayfaya dokunulmadı).
+
 ## Sources
 
-- `raw/CV_model_gurobi_exact.py:24-25,146-171`
-- `raw/EV_v.1.1.py:98-99,306-353`
+- `raw/CV_model_gurobi_exact.py:24-25,146-171` (eski, 2026-08-09 hâli)
+- `raw/EV_v.1.1.py:98-99,306-353` (eski, 2026-08-09 hâli)
+- `raw/CV_model_gurobi_exact.py:90-91,340-364` (yeni, 2026-08-22)
+- `raw/EV_v.1.1.py:101-102,330-352` (yeni, 2026-08-22)
 - `src/CV_model_gurobi_fixed.py:32-49,116-117,377-422`
 - `src/EV_v_1_1_fixed.py:118-130,198-199,472-548`
 
@@ -53,3 +61,6 @@ Tam refaktör kaydı: [[karar_a2_c1_birlesik_k_indeksi_ve_enerji_indeksleme]].
 - [[karar_a7_cv_yakit_tuketim_orani_duzeltmesi]]
 - [[karar_a2_c1_birlesik_k_indeksi_ve_enerji_indeksleme]]
 - [[sorun_ye_ye_esitsizlik_kismi_sarj_raporlama_hatasi]]
+- [[sorun_ev_depo_yaylarinda_dongusel_infeasibility]]
+- [[karar_ev_depo_sarj_ve_donus_enerjisi_kisitlari]]
+- [[sorun_ev17_big_m_gecersiz_kucuk]]

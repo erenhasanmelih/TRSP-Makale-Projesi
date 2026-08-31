@@ -31,10 +31,15 @@ Bu bulgu, [[karar_partial_charging_denklemleri_entegrasyonu_plani]]'nın (Keskin
 
 `ye`/`YE` arasına Keskin & Çatay'ın tam doğrusal kısmi şarj formülasyonu (şarj hızı katsayısı × süre eşitliği, `YE[i,k] = ye[i,k] + g_e * charge_duration[i,k]`) eklenip mevcut `<=` eşitsizlikleri `==` eşitliğe dönüştürülmeli. Bu, [[karar_partial_charging_denklemleri_entegrasyonu_plani]]'nın kapsamına giriyor.
 
+## Güncelleme (2026-08-22) — aynı desen, bağımsız olarak yeni raw/EV_v.1.1.py'de de var
+
+Bu sayfa özgün olarak `src/EV_v_1_1_fixed.py` (Faz 2) hakkındaydı. Yeni `raw/EV_v.1.1.py`'nin (2026-08-22) EV18/EV19 kısıtları da **aynı tek-yönlü `<=` deseni** kullanıyor (eşitlik yok) — bu, kısmen aynı raporlama-güvenilirliği riskini bağımsız olarak taşıyor gibi görünüyor. Ancak `raw/EV_v.1.1.py`'de muhtemelen daha kök bir sorun (A1'in miras alınmaması, bkz. [[sorun_v1_1_raw_faz2_duzeltmelerini_miras_almadi]]) var olabileceğinden, bu ikinci-derece "eşitsizlik" bulgusu o kök sorun çözülmeden ayrıca test edilemez. Doğrulanmadı, dokunulmadı.
+
 ## Sources
 
 - `src/EV_v_1_1_fixed.py:484-498` (c20_ub, c21_ub — tek yönlü eşitsizlikler)
 - test çalıştırması (Faz 2 doğrulama notları, R5 problem seti)
+- `raw/EV_v.1.1.py:337-346` (yeni, 2026-08-22 — EV18/EV19, aynı desen, doğrulanmadı)
 
 ## Related
 

@@ -55,15 +55,21 @@ R5 problem setinde Gurobi 13 ile her iki model de OPTIMAL, `obj=10116.10` (EV=CV
 - Yardımcı veri yapıları: [[birlesik_k_indeksi_ve_yardimci_haritalar]]
 - İlişkili A7 (araç-bazlı tüketim oranı): [[karar_a7_cv_yakit_tuketim_orani_duzeltmesi]]
 
+## Güncelleme (2026-08-22)
+
+`raw/EV_v.1.1.py`/`raw/CV_model_gurobi_exact.py` (bu sayfanın "orijinal 4B x" olarak gösterdiği dosyalar) 2026-08-22'de değişti — **`raw/`'un kendisi artık `x` için 3B'ye geçmiş durumda** (`x[i,j,kk]`, `kk` doğrudan tuple), ama Faz 2'nin `K_pairs`/`KK` (tamsayı indeks) yaklaşımından farklı bir mekanizmayla. Enerji/yakıt izleme (`ye`/`YE`, `yc`/`YC`) ise `raw/`'da hâlâ düğüm-bazlı tek-indisli kalmış (Faz 2'nin `(Np,K)` çok-indisli yaklaşımı `raw/`'a taşınmadı). Detay: [[degisken_x_arc_tahsisi]], [[degisken_yakit_enerji_izleme]] güncellemeleri, [[karar_src_klasoru_ve_raw_izolasyonu]].
+
 ## Sources
 
 - `src/EV_v_1_1_fixed.py:113-206`
 - `src/CV_model_gurobi_fixed.py:24-26,32-116`
-- `raw/EV_v.1.1.py:95-99` (orijinal 4B x, düğüm-bazlı ye/YE)
-- `raw/CV_model_gurobi_exact.py:21,24-25` (orijinal 4B x, düğüm-bazlı yc/YC, orijinal `k` talep parametresi)
+- `raw/EV_v.1.1.py:95-99` (orijinal 4B x, düğüm-bazlı ye/YE — eski, 2026-08-09 hâli)
+- `raw/CV_model_gurobi_exact.py:21,24-25` (orijinal 4B x, düğüm-bazlı yc/YC, orijinal `k` talep parametresi — eski, 2026-08-09 hâli)
 
 ## Related
 
+- [[karar_rc13_asgari_paket_uygulamasi]] (Ö1, A5 yetkinlik filtresinin `raw/`'a UYGULANMIŞ hâlidir — 2026-08-28)
+- [[sorun_rc13_darbogaz_kok_neden_analizi]] (A5 yetkinlik filtresi `src/`'de var ama `raw/`'a taşınmamış — Ö1'in birebir aynı önerisi)
 - [[karar_4b_to_3b_index_reduction_plani]]
 - [[colored_tsp]]
 - [[index_reduction_3b]]

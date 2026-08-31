@@ -24,6 +24,7 @@ TRSP'nin tam (exact) matematiksel modelinin çözümü için kullanılan ticari 
 
 ## Related
 
+- [[sorun_rc13_darbogaz_kok_neden_analizi]] (Symmetry=2 model boyutu indirimini modelleme düzeyinde ikame etmiyor; presolve yetkinlik filtresini bulamıyor)
 - [[python_gurobipy]]
 - [[tight_big_m]]
 - [[index_reduction_3b]]

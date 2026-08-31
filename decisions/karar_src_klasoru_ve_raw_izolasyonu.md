@@ -32,16 +32,31 @@ R5 problem setinde Gurobi 13 ile üç dosya birlikte çalıştırıldı: EV `sta
 
 ## Kapsam notu
 
-`resolve_data_root()` fonksiyonu her iki model dosyasına da eklendi çünkü orijinal `os.path.dirname(__file__)` tabanlı veri/çıktı yolu deseni, dosyalar `src/`'e taşınınca kırılırdı — veri hâlâ `raw/`'dan okunmalı, çıktı ise `src/sonuclar/`'a yazılmalı. Detay: `entities/model_calistirma_parametreleri_ev.md`.
+`resolve_data_root()` fonksiyonu her iki model dosyasına da eklendi çünkü orijinal `os.path.dirname(__file__)` tabanlı veri/çıktı yolu deseni, dosyalar `src/`'e taşınınca kırılırdı — veri hâlâ `raw/`'dan okunmalı, çıktı ise `src/sonuclar/`'a yazılmalı. Detay: bu bilgiyi belgeleyen sayfa (`entities/model_calistirma_parametreleri_ev.md`) 2026-08-22'de silindi; ENABLE_PAIR_CREWS vb. bayraklar zaten v1.1'de kaldırıldı.
+
+## GÜNCELLEME (2026-08-22) — raw/ Tabanı Değişti, src/*_fixed.py Artık Eski Bir Taban Üzerine Kurulu
+
+**Durum değişikliği:** Eren'in açık onayıyla (CLAUDE.md Hard Rule §7.1'in bilinçli, bu seferlik istisnası — kullanıcı talebi, ajan tarafından tek taraflı alınmış bir karar değil), `raw/CV_model_gurobi_exact.py`, `raw/EV_v.1.1.py` ve `raw/xml_data_loader.py` **2026-08-22 tarihinde tamamen yeni bir "v1.1" içerikle DEĞİŞTİRİLDİ** (+ yeni `raw/solution_validator.py` eklendi). Bu, yukarıdaki tablonun temel varsayımını geçersiz kılıyor: **"Orijinal (`raw/`, salt-okunur)" sütunundaki dosyalar artık bu sayfanın (2026-08-11 tarihli) yazıldığı andaki içerikle AYNI DEĞİL.**
+
+**Somut etki — `src/*_fixed.py` dosyaları artık şu ana raw/ tabanıyla senkron değil:**
+
+1. **`src/EV_v_1_1_fixed.py`**, eski `raw/EV_v.1.1.py`'nin (route_start/route_end/ord_* teknisyen-çakışma-önleme bloğu, `y_route`, `ENABLE_PAIR_CREWS`/`FEASIBILITY_FOCUSED_PARAMS` bayrakları, Tee/docx otomatik raporlama, 12 Gurobi tuning parametresi + IIS diagnostiği olan sürüm) türetilmiş bir kopyasıdır. **Yeni `raw/EV_v.1.1.py` bu mekanizmaların HİÇBİRİNİ içermiyor** — tamamen farklı, çok daha sade bir yapıya (basit `z_veh`/EV-22/EV-23 tekillik kısıtları, çoklu sefer EV-4, tek bir `data` dict parametresi hâlâ korunmuş ama içeriği baştan yazılmış) sahip. Yani `src/EV_v_1_1_fixed.py` artık "güncel `raw/EV_v.1.1.py`'nin düzeltilmiş hâli" değil, **"artık var olmayan bir önceki `raw/EV_v.1.1.py` sürümünün düzeltilmiş hâli"**dir.
+2. **`src/CV_model_gurobi_fixed.py`** de benzer şekilde eski `raw/CV_model_gurobi_exact.py`'den türetildi (`c4_{v}` tek-sefer, sabit `100000.0` Big-M, `Fc`/`alpha`/`g_c`/`k`/`lc0` tamamen ölü). **Yeni `raw/CV_model_gurobi_exact.py`** artık kendi başına çoklu sefer (`CV4_multitrip`, ≤3), kendi tight-Big-M ifadeleri (sabit `100000.0` YOK) ve kendi araç-ekip/teknisyen tekillik kısıtlarını (`CV27`/`CV28`, `z` değişkeni) içeriyor — **A2+C1 (index reduction), C2 (tight-M) ve A6 (teknisyen çakışma) sorun kodlarının kapsadığı sorunların çoğu, `src/`'deki düzeltmelerden BAĞIMSIZ, farklı bir mekanizmayla `raw/`'un kendisinde de fiilen ele alınmış** (bkz. [[sorun_v1_1_raw_faz2_duzeltmelerini_miras_almadi]] ve [[karar_v1_1_coklu_sefer_ve_z_tekillik_kisitlari]]).
+3. **A1 (EV şarj c20/c21 çakışması) ve A7 (CV `h_c` sabiti) için durum TERSİNE** işliyor: yeni `raw/EV_v.1.1.py` ve `raw/xml_data_loader.py`, Faz 2'nin bu iki düzeltmesini **miras almamış** — aynı mimari kusur (istasyon çıkışında şarj-öncesi zincirin şarj-sonrası zinciri ezmesi; `h_c=1.0` sabiti, `EnergyConsumptionRate` XML'den okunmuyor) yeni kodda da statik okumayla tespit edildi. Ayrıntı ve doğrulanmamışlık uyarısı: [[sorun_v1_1_raw_faz2_duzeltmelerini_miras_almadi]].
+
+**Ne yapılmadı / ne bekliyor:** `src/*_fixed.py` dosyaları bu ingest kapsamında **GÜNCELLENMEDİ** — bu, matematiksel/algoritmik bir karar (hangi düzeltmelerin yeni `raw/` tabanına yeniden uygulanacağı) gerektiriyor ve kütüphanecinin (bu ajanın) yetki alanı dışında. `trsp-exact-model-mimari`'nin şu soruyu değerlendirmesi gerekiyor: Faz 2'nin C1/C2/A2/A5/A6 kazanımları yeni `raw/` tabanında zaten (farklı bir mekanizmayla) mevcut olduğuna göre, `src/*_fixed.py`'yi yeni tabana göre yeniden mi türetmeli, yoksa yeni `raw/` kodunu doğrudan makale/deney tabanı olarak mı kabul etmeli (ki bu durumda `src/` klasörünün amacı kökten değişir)?
+
+**Bu sayfanın geri kalanı (aşağıdaki orijinal içerik) 2026-08-11 tarihli, o zamanki `raw/` durumuna göre hâlâ doğru bir tarihsel kayıttır — silinmedi, sadece artık "güncel raw/" ile eşleşmiyor.**
 
 ## Sources
 
 - `src/EV_v_1_1_fixed.py:1-26`
 - `src/CV_model_gurobi_fixed.py`
 - `src/xml_data_loader_fixed.py`
-- `raw/EV_v.1.1.py`
-- `raw/CV_model_gurobi_exact.py`
-- `raw/xml_data_loader.py`
+- `raw/EV_v.1.1.py` (2026-08-22 sonrası hâli — Faz 2 öncesi/sonrası hiçbir düzeltmeyi yansıtmıyor)
+- `raw/CV_model_gurobi_exact.py` (2026-08-22 sonrası hâli)
+- `raw/xml_data_loader.py` (2026-08-22 sonrası hâli)
+- `git show HEAD:raw/EV_v.1.1.py`, `git show HEAD:raw/CV_model_gurobi_exact.py`, `git show HEAD:raw/xml_data_loader.py` — `src/*_fixed.py`'nin türetildiği ESKİ raw/ içeriğine erişim (git geçmişi)
 
 ## Related
 
@@ -51,5 +66,8 @@ R5 problem setinde Gurobi 13 ile üç dosya birlikte çalıştırıldı: EV `sta
 - [[karar_a6_cv_non_overlap_portlamasi]]
 - [[karar_a4_zaman_penceresi_bigm_kosullandirma]]
 - [[karar_c2_tight_big_m_uygulamasi]]
-- [[model_calistirma_parametreleri_ev]]
 - [[gurobi_mip_cozucusu]]
+- [[sorun_v1_1_raw_faz2_duzeltmelerini_miras_almadi]]
+- [[karar_v1_1_coklu_sefer_ve_z_tekillik_kisitlari]]
+- [[sources/2026-08-22-cv_model_gurobi_exact_v1_1]]
+- [[sources/2026-08-22-ev_v1_1_rewrite]]
